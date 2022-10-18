@@ -7,7 +7,7 @@ import snowflake.connector  #upm package(snowflake-connector-python==2.7.0)
 @st.experimental_singleton
 def init_connection():
     con = snowflake.connector.connect(
-        user=os.getenv("USER"),
+        user=os.getenv("SFUSER"),
         password=os.getenv("PASSWORD"),
         account=os.getenv("ACCOUNT"),
         role=os.getenv("ROLE"),
